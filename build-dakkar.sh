@@ -49,6 +49,7 @@ ROM types:
   aex
   slim
   havoc
+  lr
 
 Variants are dash-joined combinations of (in order):
 * processor type
@@ -189,6 +190,13 @@ function get_rom_type() {
                 mainbranch="pie"
                 localManifestBranch="android-9.0"
                 treble_generate="havoc"
+                extra_make_options="WITHOUT_CHECK_API=true"
+                ;;
+	    lr)
+                mainrepo="https://github.com/LiquidRemix/android_manifest.git"
+                mainbranch="pie"
+                localManifestBranch="android-9.0"
+                treble_generate="lr"
                 extra_make_options="WITHOUT_CHECK_API=true"
                 ;;
         esac
